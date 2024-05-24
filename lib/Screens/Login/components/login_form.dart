@@ -30,7 +30,8 @@ class _LoginFormState extends State<LoginForm> {
               cursorColor: kPrimaryColor,
               onSaved: (email) {},
               decoration: const InputDecoration(
-                hintText: "Adresse email",
+                label: Text("Adresse email"),
+                border: OutlineInputBorder(),
                 prefixIcon: Padding(
                   padding: EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.person),
@@ -47,7 +48,8 @@ class _LoginFormState extends State<LoginForm> {
                 obscureText: true,
                 cursorColor: kPrimaryColor,
                 decoration: const InputDecoration(
-                  hintText: "Mot de passe",
+                  label: Text("Mot de passe"),
+                  border: OutlineInputBorder(),
                   prefixIcon: Padding(
                     padding: EdgeInsets.all(defaultPadding),
                     child: Icon(Icons.lock),

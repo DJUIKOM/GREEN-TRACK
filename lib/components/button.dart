@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nb_utils/nb_utils.dart';
 
 
 class CustomButon extends StatefulWidget {
@@ -16,22 +17,14 @@ class _CustomButonState extends State<CustomButon> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400,
+      width: 370,
       child: Row(
         children: [
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(8.0), // Ajoute un padding de 8.0
-
-              child: ElevatedButton(
-                onPressed: widget.onPress,
-                style: ElevatedButton.styleFrom(backgroundColor: widget.color,
-                  padding: EdgeInsets.all(20),
-
-                ),
-                child: Text(widget.title),
-              )
-              ,
+            child: AppButton(
+              onTap: widget.onPress,
+              color: widget.color,
+              child: Text(widget.title),
             ),
           ),
 

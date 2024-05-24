@@ -16,24 +16,26 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          login ? "Vous n'avez pas de compte ? " : "Vous avez déjà un compte ? ",
-          style: const TextStyle(color: Colors.grey),
-        ),
-        TextButton(
-          onPressed: (){
-            login? SignUpScreen().launch(context):LoginScreen().launch(context);
-          },
-          child: Text(login ? "S'inscrire" : "Se connecter", style: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          )),
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            login ? "Vous n'avez pas de compte ? " : "Avez-vous un compte ? ",
+            style: const TextStyle(color: Colors.grey),
+          ),
+          TextButton(
+            onPressed: (){
+              login? SignUpScreen().launch(context):LoginScreen().launch(context);
+            },
+            child: Text(login ? "S'inscrire" : "Se connecter", style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            )),
 
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

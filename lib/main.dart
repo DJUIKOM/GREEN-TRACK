@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         // Your app configuration
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Admin Panel',
+        title: 'GREEN TRACK',
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: bgColor,
           textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
